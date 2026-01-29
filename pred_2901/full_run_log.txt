@@ -1,0 +1,32 @@
+[I 2026-01-29 15:34:19,961] A new study created in memory with name: no-name-72100907-7334-4581-a8e2-ab5aed9f6769
+[I 2026-01-29 15:34:25,473] Trial 0 finished with value: 3.0829702401533723 and parameters: {'n_layers': 2, 'layer_0_dim': 37, 'layer_1_dim': 65, 'dropout': 0.20941900767729313, 'lr': 0.00010352586844968038}. Best is trial 0 with value: 3.0829702401533723.
+[I 2026-01-29 15:34:28,601] Trial 1 finished with value: 1.3015100283082575 and parameters: {'n_layers': 1, 'layer_0_dim': 106, 'dropout': 0.16494038482344528, 'lr': 0.004128615841344261}. Best is trial 1 with value: 1.3015100283082575.
+[I 2026-01-29 15:34:32,919] Trial 2 finished with value: 4.3653662372380495 and parameters: {'n_layers': 3, 'layer_0_dim': 65, 'layer_1_dim': 31, 'layer_2_dim': 96, 'dropout': 0.1751937103755276, 'lr': 0.0004569730118602127}. Best is trial 1 with value: 1.3015100283082575.
+[I 2026-01-29 15:34:36,001] Trial 3 finished with value: 6.045251767151058 and parameters: {'n_layers': 1, 'layer_0_dim': 35, 'dropout': 0.24730521369692784, 'lr': 0.009920966399171161}. Best is trial 1 with value: 1.3015100283082575.
+[I 2026-01-29 15:34:40,350] Trial 4 finished with value: 0.1348497005747049 and parameters: {'n_layers': 3, 'layer_0_dim': 29, 'layer_1_dim': 108, 'layer_2_dim': 97, 'dropout': 0.028835462421241253, 'lr': 0.002532400701581831}. Best is trial 4 with value: 0.1348497005747049.
+[I 2026-01-29 15:34:41,103] Trial 5 pruned. 
+[I 2026-01-29 15:34:44,238] Trial 6 finished with value: 0.4006625475594774 and parameters: {'n_layers': 1, 'layer_0_dim': 96, 'dropout': 0.24595255252952414, 'lr': 0.004076461714663998}. Best is trial 4 with value: 0.1348497005747049.
+[I 2026-01-29 15:34:47,386] Trial 7 finished with value: 0.2674987997452263 and parameters: {'n_layers': 1, 'layer_0_dim': 53, 'dropout': 0.14708925691480482, 'lr': 0.00038182461502022936}. Best is trial 4 with value: 0.1348497005747049.
+[I 2026-01-29 15:34:48,217] Trial 8 pruned. 
+[I 2026-01-29 15:34:48,852] Trial 9 pruned. 
+Loading data from: /home/kulkarni/projects/pred_maintenance/dataset
+Forcing Sensor List (8): ['P-PDG', 'P-TPT', 'T-PDG', 'T-TPT', 'P-MON-CKP', 'T-JUS-CKP', 'P-JUS-CKGL', 'QGL']
+Found 594 Normal files.
+[Train] Generated 51122 windows. (Skipped 271 incompatible files)
+[Val] Generated 11768 windows. (Skipped 56 incompatible files)
+[Test(Normal)] Generated 10979 windows. (Skipped 59 incompatible files)
+Processing Anomaly Files...
+[Class 2] Generated 171 windows. (Skipped 37 incompatible files)
+[Class 3] Generated 0 windows. (Skipped 50 incompatible files)
+[Class 4] Generated 6461 windows. (Skipped 14 incompatible files)
+[Class 5] Generated 0 windows. (Skipped 50 incompatible files)
+[Class 6] Generated 0 windows. (Skipped 50 incompatible files)
+[Class 7] Generated 51581 windows. (Skipped 23 incompatible files)
+[Class 8] Generated 0 windows. (Skipped 50 incompatible files)
+Training Tensor Shape: (51122, 120, 8)
+Starting Optimization...
+Best params: {'n_layers': 3, 'layer_0_dim': 29, 'layer_1_dim': 108, 'layer_2_dim': 97, 'dropout': 0.028835462421241253, 'lr': 0.002532400701581831}
+Training Final Model...
+Evaluating...
+ROC Curve saved to /home/kulkarni/projects/pred_maintenance/meeting_prep/final_baseline_roc.png
+FINAL AUROC: 0.9861
