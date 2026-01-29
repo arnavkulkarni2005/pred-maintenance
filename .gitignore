@@ -1,3 +1,5 @@
 venv/
 __pycache__/
 *.pyc
+pred_2901/__pycache__/
+pred_2901/venv/
