@@ -1,0 +1,106 @@
+[I 2026-03-02 00:23:11,987] A new study created in memory with name: no-name-9aae26d1-f627-4ba5-98db-d2f630ebb8e3
+[I 2026-03-02 00:23:41,253] Trial 0 finished with value: 0.008113564638279058 and parameters: {'n_layers': 2, 'layer_0_dim': 96, 'layer_1_dim': 96, 'dropout': 0.091370202905371, 'lr': 0.00023146433511288256}. Best is trial 0 with value: 0.008113564638279058.
+[I 2026-03-02 00:24:08,155] Trial 1 finished with value: 0.06777353684096851 and parameters: {'n_layers': 2, 'layer_0_dim': 80, 'layer_1_dim': 80, 'dropout': 0.022694544216369163, 'lr': 0.0004185923380248485}. Best is trial 0 with value: 0.008113564638279058.
+[I 2026-03-02 00:24:33,294] Trial 2 finished with value: 0.0031760488911459104 and parameters: {'n_layers': 1, 'layer_0_dim': 112, 'dropout': 0.12457466918295138, 'lr': 0.0004790165842036317}. Best is trial 2 with value: 0.0031760488911459104.
+[I 2026-03-02 00:25:00,324] Trial 3 finished with value: 0.007168408203142462 and parameters: {'n_layers': 2, 'layer_0_dim': 112, 'layer_1_dim': 128, 'dropout': 0.12437105938868272, 'lr': 0.0004896032035185398}. Best is trial 2 with value: 0.0031760488911459104.
+[I 2026-03-02 00:25:27,354] Trial 4 finished with value: 0.03352987904218026 and parameters: {'n_layers': 2, 'layer_0_dim': 32, 'layer_1_dim': 64, 'dropout': 0.10445299365796684, 'lr': 0.0001612985052319611}. Best is trial 2 with value: 0.0031760488911459104.
+[I 2026-03-02 00:25:30,058] Trial 5 pruned. 
+[I 2026-03-02 00:25:32,748] Trial 6 pruned. 
+[I 2026-03-02 00:25:35,255] Trial 7 pruned. 
+[I 2026-03-02 00:25:37,739] Trial 8 pruned. 
+[I 2026-03-02 00:25:40,457] Trial 9 pruned. 
+
+--- PHASE 1: OPTUNA HYPERPARAMETER TUNING (MLP) ---
+Fitting Imputer and Scaler on Train Files only...
+Running Bayesian Imputation fit...
+Running RobustScaler fit...
+Generating Optuna Window Tensors...
+
+Optimal Unsupervised Params Found: {'n_layers': 1, 'layer_0_dim': 112, 'dropout': 0.12457466918295138, 'lr': 0.0004790165842036317}
+
+--- PHASE 2: STRICT 4-FOLD EVALUATION (MLP) ---
+
+================ FOLD 1 / 4 ================
+Fitting Imputer and Scaler on Train Files only...
+Running Bayesian Imputation fit...
+Running RobustScaler fit...
+Generating Normal Train/Val Tensors...
+Processing Anomaly Tensors via Fold Preprocessor...
+Training MLP Autoencoder...
+Evaluating Anomalies and Saving Plots...
+  Class 1 AUROC: 0.9986
+  Class 2 AUROC: 0.9910
+  Class 3 AUROC: 0.9955
+  Class 4 AUROC: 0.7808
+  Class 5 AUROC: 0.9996
+  Class 6 AUROC: 0.9925
+  Class 7 AUROC: 0.9982
+  Class 8 AUROC: 0.9997
+
+================ FOLD 2 / 4 ================
+Fitting Imputer and Scaler on Train Files only...
+Running Bayesian Imputation fit...
+Running RobustScaler fit...
+Generating Normal Train/Val Tensors...
+Processing Anomaly Tensors via Fold Preprocessor...
+Training MLP Autoencoder...
+Evaluating Anomalies and Saving Plots...
+  Class 1 AUROC: 0.9538
+  Class 2 AUROC: 0.9522
+  Class 3 AUROC: 0.9526
+  Class 4 AUROC: 0.8575
+  Class 5 AUROC: 0.9535
+  Class 6 AUROC: 0.9517
+  Class 7 AUROC: 0.9577
+  Class 8 AUROC: 0.9697
+
+================ FOLD 3 / 4 ================
+Fitting Imputer and Scaler on Train Files only...
+Running Bayesian Imputation fit...
+Running RobustScaler fit...
+Generating Normal Train/Val Tensors...
+Processing Anomaly Tensors via Fold Preprocessor...
+Training MLP Autoencoder...
+Evaluating Anomalies and Saving Plots...
+  Class 1 AUROC: 0.9897
+  Class 2 AUROC: 0.9561
+  Class 3 AUROC: 0.9263
+  Class 4 AUROC: 0.7976
+  Class 5 AUROC: 0.9264
+  Class 6 AUROC: 0.9417
+  Class 7 AUROC: 0.9927
+  Class 8 AUROC: 0.9855
+
+================ FOLD 4 / 4 ================
+Fitting Imputer and Scaler on Train Files only...
+Running Bayesian Imputation fit...
+Running RobustScaler fit...
+Generating Normal Train/Val Tensors...
+Processing Anomaly Tensors via Fold Preprocessor...
+Training MLP Autoencoder...
+Evaluating Anomalies and Saving Plots...
+  Class 1 AUROC: 0.9988
+  Class 2 AUROC: 0.9962
+  Class 3 AUROC: 0.9975
+  Class 4 AUROC: 0.9213
+  Class 5 AUROC: 0.9997
+  Class 6 AUROC: 0.9955
+  Class 7 AUROC: 0.9989
+  Class 8 AUROC: 0.9995
+
+==================================================
+FINAL STRICT NO-LEAKAGE SYSTEM PERFORMANCE (MLP)
+==================================================
+   Mean_AUROC  Max_AUROC   Std_Dev
+1    0.985191   0.998760  0.021366
+2    0.973863   0.996165  0.022914
+3    0.967991   0.997478  0.034648
+4    0.839293   0.921293  0.063823
+5    0.969781   0.999665  0.036227
+6    0.970342   0.995519  0.027662
+7    0.986870   0.998908  0.019645
+8    0.988603   0.999671  0.014216
+
+OVERALL MEAN SYSTEM AUROC: 0.9602
+
+Results and all ROC plots successfully saved to meeting_prep/

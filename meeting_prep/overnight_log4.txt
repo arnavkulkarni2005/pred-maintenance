@@ -1,0 +1,75 @@
+==================================================
+STARTING DATA LOADING PIPELINE (DIAGNOSTIC MODE)
+==================================================
+FITTING ITERATIVE IMPUTER (BayesianRidge)...
+Imputer fitting complete!
+Train: Generated 274181 windows.
+Val: Generated 64635 windows.
+Test(Normal): Generated 61988 windows.
+
+PROCESSING ANOMALY CLASSES...
+Class 1: Generated 302552 windows.
+Class 2: Generated 24299 windows.
+Class 3: Generated 164172 windows.
+Class 4: Generated 120410 windows.
+Class 5: Generated 439956 windows.
+Class 6: Generated 194317 windows.
+Class 7: Generated 342467 windows.
+Class 8: Generated 232449 windows.
+
+NORMALIZING DATA (RobustScaler)...
+
+========================================
+FOLD 1 / 4
+========================================
+   Epoch 0: Training Loss 0.083832
+   Epoch 5: Training Loss 0.004619
+   Epoch 10: Training Loss 0.003506
+
+[FOLD 1] INTERNAL ANALYSIS
+   -> Normal Reconstruction Stability: 99.8769%
+   CLASS 4 (Flow Restriction) Progress: 0.7980
+
+========================================
+FOLD 2 / 4
+========================================
+   Epoch 0: Training Loss 0.080898
+   Epoch 5: Training Loss 0.004388
+   Epoch 10: Training Loss 0.003643
+
+[FOLD 2] INTERNAL ANALYSIS
+   -> Normal Reconstruction Stability: 99.8858%
+   🎯 CLASS 4 (Flow Restriction) Progress: 0.9312
+
+========================================
+FOLD 3 / 4
+========================================
+   Epoch 0: Training Loss 0.083700
+   Epoch 5: Training Loss 0.004755
+   Epoch 10: Training Loss 0.003662
+
+🔬 [FOLD 3] INTERNAL ANALYSIS
+   -> Normal Reconstruction Stability: 99.8254%
+   🎯 CLASS 4 (Flow Restriction) Progress: 0.8383
+
+========================================
+FOLD 4 / 4
+========================================
+   Epoch 0: Training Loss 0.076729
+   Epoch 5: Training Loss 0.004420
+   Epoch 10: Training Loss 0.003425
+
+🔬 [FOLD 4] INTERNAL ANALYSIS
+   -> Normal Reconstruction Stability: 99.9387%
+   🎯 CLASS 4 (Flow Restriction) Progress: 0.9263
+
+📊 FINAL K-FOLD PERFORMANCE TABLE
+       Mean       Max
+1  0.999368  0.999679
+2  0.997370  0.999127
+3  0.997947  0.998789
+4  0.873429  0.931157
+5  0.997651  0.999133
+6  0.992936  0.998148
+7  0.998873  0.999265
+8  0.999358  0.999606

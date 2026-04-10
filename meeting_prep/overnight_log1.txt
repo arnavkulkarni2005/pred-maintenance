@@ -1,0 +1,194 @@
+[I 2026-03-01 18:09:20,981] A new study created in memory with name: no-name-4dc98fe7-60d0-427c-8e65-0cb86ec56a45
+[I 2026-03-01 18:09:28,867] Trial 0 finished with value: 253.42367847496644 and parameters: {'n_layers': 1, 'layer_0_dim': 116, 'dropout': 0.12560905642000028, 'lr': 0.0030675018477130654, 'batch_size': 256}. Best is trial 0 with value: 253.42367847496644.
+[I 2026-03-01 18:09:33,486] Trial 1 finished with value: 134.44141972082434 and parameters: {'n_layers': 1, 'layer_0_dim': 60, 'dropout': 0.15174263520124434, 'lr': 0.006190658603164786, 'batch_size': 512}. Best is trial 1 with value: 134.44141972082434.
+[I 2026-03-01 18:09:41,376] Trial 2 finished with value: 655.9425438786857 and parameters: {'n_layers': 1, 'layer_0_dim': 35, 'dropout': 0.25143284029236995, 'lr': 0.001749058035232081, 'batch_size': 128}. Best is trial 1 with value: 134.44141972082434.
+[I 2026-03-01 18:09:45,942] Trial 3 finished with value: 126.48493876634166 and parameters: {'n_layers': 1, 'layer_0_dim': 89, 'dropout': 0.05530388213759726, 'lr': 0.009457249559558291, 'batch_size': 512}. Best is trial 3 with value: 126.48493876634166.
+[I 2026-03-01 18:09:57,164] Trial 4 finished with value: 1141.9436432073126 and parameters: {'n_layers': 3, 'layer_0_dim': 70, 'layer_1_dim': 20, 'layer_2_dim': 83, 'dropout': 0.14307414330601262, 'lr': 0.000283248167354869, 'batch_size': 128}. Best is trial 3 with value: 126.48493876634166.
+[I 2026-03-01 18:10:02,209] Trial 5 finished with value: 224.17563064210117 and parameters: {'n_layers': 2, 'layer_0_dim': 34, 'layer_1_dim': 32, 'dropout': 0.06215976918825053, 'lr': 0.00010859976806860096, 'batch_size': 512}. Best is trial 3 with value: 126.48493876634166.
+[I 2026-03-01 18:10:05,261] Trial 6 pruned. 
+[I 2026-03-01 18:10:10,554] Trial 7 finished with value: 227.10566664245562 and parameters: {'n_layers': 3, 'layer_0_dim': 115, 'layer_1_dim': 126, 'layer_2_dim': 90, 'dropout': 0.040974979892315334, 'lr': 0.0006966801408099188, 'batch_size': 512}. Best is trial 3 with value: 126.48493876634166.
+[I 2026-03-01 18:10:15,017] Trial 8 pruned. 
+[I 2026-03-01 18:10:19,641] Trial 9 finished with value: 138.06582534417976 and parameters: {'n_layers': 1, 'layer_0_dim': 30, 'dropout': 0.12438659927167231, 'lr': 0.0018164532526938999, 'batch_size': 512}. Best is trial 3 with value: 126.48493876634166.
+[I 2026-03-01 18:10:22,313] Trial 10 pruned. 
+[I 2026-03-01 18:10:26,918] Trial 11 finished with value: 199.88376341713592 and parameters: {'n_layers': 1, 'layer_0_dim': 53, 'dropout': 0.19340057282250478, 'lr': 0.00879269151775028, 'batch_size': 512}. Best is trial 3 with value: 126.48493876634166.
+[I 2026-03-01 18:10:31,571] Trial 12 finished with value: 224.30588733317563 and parameters: {'n_layers': 1, 'layer_0_dim': 89, 'dropout': 0.08369915160725416, 'lr': 0.005403649656287244, 'batch_size': 512}. Best is trial 3 with value: 126.48493876634166.
+[I 2026-03-01 18:10:36,186] Trial 13 finished with value: 553.7726177750155 and parameters: {'n_layers': 1, 'layer_0_dim': 80, 'dropout': 0.08650709897957977, 'lr': 0.009936483495350876, 'batch_size': 512}. Best is trial 3 with value: 126.48493876634166.
+[I 2026-03-01 18:10:38,177] Trial 14 pruned. 
+[I 2026-03-01 18:10:40,874] Trial 15 pruned. 
+[I 2026-03-01 18:10:45,517] Trial 16 finished with value: 146.75997038831702 and parameters: {'n_layers': 1, 'layer_0_dim': 71, 'dropout': 0.2282245320360209, 'lr': 0.0011297986281339747, 'batch_size': 512}. Best is trial 3 with value: 126.48493876634166.
+[I 2026-03-01 18:10:50,157] Trial 17 finished with value: 146.39569707639748 and parameters: {'n_layers': 1, 'layer_0_dim': 47, 'dropout': 0.1038900102906895, 'lr': 0.006053904433177043, 'batch_size': 512}. Best is trial 3 with value: 126.48493876634166.
+[I 2026-03-01 18:10:53,283] Trial 18 pruned. 
+[I 2026-03-01 18:10:55,934] Trial 19 pruned. 
+[I 2026-03-01 18:10:57,919] Trial 20 pruned. 
+[I 2026-03-01 18:11:02,531] Trial 21 finished with value: 168.45225986500736 and parameters: {'n_layers': 1, 'layer_0_dim': 16, 'dropout': 0.12064696055161529, 'lr': 0.0018913334677986798, 'batch_size': 512}. Best is trial 3 with value: 126.48493876634166.
+[I 2026-03-01 18:11:07,148] Trial 22 finished with value: 156.7679245613399 and parameters: {'n_layers': 1, 'layer_0_dim': 31, 'dropout': 0.14542421782430798, 'lr': 0.0013709958544710903, 'batch_size': 512}. Best is trial 3 with value: 126.48493876634166.
+[I 2026-03-01 18:11:11,609] Trial 23 finished with value: 218.64118593586318 and parameters: {'n_layers': 1, 'layer_0_dim': 128, 'dropout': 0.07150499914539393, 'lr': 0.003678490897002425, 'batch_size': 512}. Best is trial 3 with value: 126.48493876634166.
+[I 2026-03-01 18:11:16,473] Trial 24 finished with value: 95.51781399533502 and parameters: {'n_layers': 1, 'layer_0_dim': 62, 'dropout': 0.10902264509464632, 'lr': 0.0021208411624643137, 'batch_size': 512}. Best is trial 24 with value: 95.51781399533502.
+[I 2026-03-01 18:11:20,984] Trial 25 finished with value: 145.33041158295237 and parameters: {'n_layers': 1, 'layer_0_dim': 58, 'dropout': 0.1052937601408882, 'lr': 0.0007514075860952868, 'batch_size': 512}. Best is trial 24 with value: 95.51781399533502.
+[I 2026-03-01 18:11:25,647] Trial 26 finished with value: 125.65654091737815 and parameters: {'n_layers': 1, 'layer_0_dim': 66, 'dropout': 0.0533386701565347, 'lr': 0.007137716744441151, 'batch_size': 512}. Best is trial 24 with value: 95.51781399533502.
+[I 2026-03-01 18:11:27,679] Trial 27 pruned. 
+[I 2026-03-01 18:11:30,032] Trial 28 pruned. 
+[I 2026-03-01 18:11:33,213] Trial 29 pruned. 
+[I 2026-03-01 18:11:35,583] Trial 30 pruned. 
+[I 2026-03-01 18:11:37,426] Trial 31 pruned. 
+[I 2026-03-01 18:11:42,129] Trial 32 finished with value: 144.3625236102962 and parameters: {'n_layers': 1, 'layer_0_dim': 46, 'dropout': 0.1185870641074002, 'lr': 0.00426557792926278, 'batch_size': 512}. Best is trial 24 with value: 95.51781399533502.
+[I 2026-03-01 18:11:43,961] Trial 33 pruned. 
+[I 2026-03-01 18:11:48,583] Trial 34 finished with value: 149.79473740479443 and parameters: {'n_layers': 1, 'layer_0_dim': 43, 'dropout': 0.10332406209617878, 'lr': 0.002451349518840753, 'batch_size': 512}. Best is trial 24 with value: 95.51781399533502.
+[I 2026-03-01 18:11:51,749] Trial 35 pruned. 
+[I 2026-03-01 18:11:53,924] Trial 36 pruned. 
+[I 2026-03-01 18:11:55,767] Trial 37 pruned. 
+[I 2026-03-01 18:11:59,616] Trial 38 pruned. 
+[I 2026-03-01 18:12:04,231] Trial 39 finished with value: 125.87990945664933 and parameters: {'n_layers': 1, 'layer_0_dim': 61, 'dropout': 0.051635903701989797, 'lr': 0.001564870074783343, 'batch_size': 512}. Best is trial 24 with value: 95.51781399533502.
+[I 2026-03-01 18:12:08,877] Trial 40 finished with value: 118.28281676158076 and parameters: {'n_layers': 1, 'layer_0_dim': 100, 'dropout': 0.05290221729481578, 'lr': 0.001321936228566222, 'batch_size': 512}. Best is trial 24 with value: 95.51781399533502.
+[I 2026-03-01 18:12:13,500] Trial 41 finished with value: 119.90574996499345 and parameters: {'n_layers': 1, 'layer_0_dim': 102, 'dropout': 0.04461992794016911, 'lr': 0.001366386690138633, 'batch_size': 512}. Best is trial 24 with value: 95.51781399533502.
+[I 2026-03-01 18:12:18,160] Trial 42 finished with value: 112.46720421098871 and parameters: {'n_layers': 1, 'layer_0_dim': 101, 'dropout': 0.04773857804820841, 'lr': 0.0014173560785969866, 'batch_size': 512}. Best is trial 24 with value: 95.51781399533502.
+[I 2026-03-01 18:12:22,798] Trial 43 finished with value: 111.96097867604112 and parameters: {'n_layers': 1, 'layer_0_dim': 118, 'dropout': 0.02112611768418219, 'lr': 0.001000593418481275, 'batch_size': 512}. Best is trial 24 with value: 95.51781399533502.
+[I 2026-03-01 18:12:27,422] Trial 44 finished with value: 89.68666306522209 and parameters: {'n_layers': 1, 'layer_0_dim': 119, 'dropout': 0.008919803913527707, 'lr': 0.000945384552114643, 'batch_size': 512}. Best is trial 44 with value: 89.68666306522209.
+[I 2026-03-01 18:12:32,048] Trial 45 finished with value: 113.5412859485732 and parameters: {'n_layers': 1, 'layer_0_dim': 123, 'dropout': 0.004853489698494105, 'lr': 0.0010277487477102416, 'batch_size': 512}. Best is trial 44 with value: 89.68666306522209.
+[I 2026-03-01 18:12:36,695] Trial 46 finished with value: 112.22160818998964 and parameters: {'n_layers': 1, 'layer_0_dim': 121, 'dropout': 0.0006468284987685147, 'lr': 0.0009048753337470821, 'batch_size': 512}. Best is trial 44 with value: 89.68666306522209.
+[I 2026-03-01 18:12:41,343] Trial 47 finished with value: 102.31740542218904 and parameters: {'n_layers': 1, 'layer_0_dim': 113, 'dropout': 0.0212407267208279, 'lr': 0.00085248118972783, 'batch_size': 512}. Best is trial 44 with value: 89.68666306522209.
+[I 2026-03-01 18:12:45,866] Trial 48 finished with value: 94.1770495864912 and parameters: {'n_layers': 1, 'layer_0_dim': 113, 'dropout': 0.026418760989435065, 'lr': 0.0005766347289836807, 'batch_size': 512}. Best is trial 44 with value: 89.68666306522209.
+[I 2026-03-01 18:12:48,563] Trial 49 pruned. 
+[I 2026-03-01 18:12:53,158] Trial 50 finished with value: 98.1463890242594 and parameters: {'n_layers': 1, 'layer_0_dim': 112, 'dropout': 0.0159264469164472, 'lr': 0.0004994235493275579, 'batch_size': 512}. Best is trial 44 with value: 89.68666306522209.
+[I 2026-03-01 18:12:57,768] Trial 51 finished with value: 134.20750178321032 and parameters: {'n_layers': 1, 'layer_0_dim': 110, 'dropout': 0.01356590090610971, 'lr': 0.0004915405496399933, 'batch_size': 512}. Best is trial 44 with value: 89.68666306522209.
+[I 2026-03-01 18:13:02,380] Trial 52 finished with value: 72.03557530151738 and parameters: {'n_layers': 1, 'layer_0_dim': 117, 'dropout': 0.023602939500861293, 'lr': 0.00030064507446865736, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:13:07,008] Trial 53 finished with value: 99.56851473127608 and parameters: {'n_layers': 1, 'layer_0_dim': 113, 'dropout': 0.033780786211178686, 'lr': 0.00033808743670885527, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:13:11,652] Trial 54 finished with value: 78.39893865256454 and parameters: {'n_layers': 1, 'layer_0_dim': 128, 'dropout': 0.03122377722704451, 'lr': 0.0002592281356637565, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:13:14,464] Trial 55 pruned. 
+[I 2026-03-01 18:13:18,957] Trial 56 finished with value: 99.63087211809761 and parameters: {'n_layers': 1, 'layer_0_dim': 118, 'dropout': 0.07199508910514646, 'lr': 0.0002270957569005145, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:13:22,210] Trial 57 pruned. 
+[I 2026-03-01 18:13:24,364] Trial 58 pruned. 
+[I 2026-03-01 18:13:28,843] Trial 59 finished with value: 120.22995064739371 and parameters: {'n_layers': 1, 'layer_0_dim': 107, 'dropout': 0.2952668902638531, 'lr': 0.0006529348915117714, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:13:30,985] Trial 60 pruned. 
+[I 2026-03-01 18:13:35,478] Trial 61 finished with value: 88.95953772080247 and parameters: {'n_layers': 1, 'layer_0_dim': 109, 'dropout': 0.034901060383905655, 'lr': 0.0003238279512243573, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:13:40,259] Trial 62 finished with value: 108.77275347601972 and parameters: {'n_layers': 1, 'layer_0_dim': 108, 'dropout': 0.03586445617614137, 'lr': 0.0001849607050958048, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:13:44,785] Trial 63 finished with value: 124.13326909561874 and parameters: {'n_layers': 1, 'layer_0_dim': 123, 'dropout': 0.012791499891246033, 'lr': 0.0005337133155957365, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:13:49,440] Trial 64 finished with value: 96.34810807101894 and parameters: {'n_layers': 1, 'layer_0_dim': 116, 'dropout': 0.08043240382736425, 'lr': 0.00033844073695768446, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:13:51,814] Trial 65 pruned. 
+[I 2026-03-01 18:13:56,486] Trial 66 finished with value: 92.32693938474404 and parameters: {'n_layers': 1, 'layer_0_dim': 126, 'dropout': 0.06550853036022324, 'lr': 0.0003213269908723886, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:14:01,135] Trial 67 finished with value: 116.78416964050848 and parameters: {'n_layers': 1, 'layer_0_dim': 125, 'dropout': 0.06521292988569269, 'lr': 0.0002822935290631317, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:14:02,965] Trial 68 pruned. 
+[I 2026-03-01 18:14:05,145] Trial 69 pruned. 
+[I 2026-03-01 18:14:08,325] Trial 70 pruned. 
+[I 2026-03-01 18:14:13,008] Trial 71 finished with value: 103.93863040127326 and parameters: {'n_layers': 1, 'layer_0_dim': 124, 'dropout': 0.07956497978243068, 'lr': 0.0003376878805793037, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:14:17,646] Trial 72 finished with value: 100.96563808427891 and parameters: {'n_layers': 1, 'layer_0_dim': 117, 'dropout': 0.0679557197567139, 'lr': 0.0003050398895449531, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:14:22,268] Trial 73 finished with value: 121.91584956739098 and parameters: {'n_layers': 1, 'layer_0_dim': 106, 'dropout': 0.1119253737273172, 'lr': 0.00034922776507920086, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:14:26,972] Trial 74 finished with value: 89.64652671094518 and parameters: {'n_layers': 1, 'layer_0_dim': 98, 'dropout': 0.09864561819812291, 'lr': 0.00045256355398390797, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:14:29,827] Trial 75 pruned. 
+[I 2026-03-01 18:14:32,234] Trial 76 pruned. 
+[I 2026-03-01 18:14:36,942] Trial 77 finished with value: 129.06612131511793 and parameters: {'n_layers': 1, 'layer_0_dim': 103, 'dropout': 0.044929518411559004, 'lr': 0.0019995380869137426, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:14:41,461] Trial 78 finished with value: 100.79457380692475 and parameters: {'n_layers': 1, 'layer_0_dim': 121, 'dropout': 0.12636654954632842, 'lr': 0.00039363428294608623, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:14:43,448] Trial 79 pruned. 
+[I 2026-03-01 18:14:47,966] Trial 80 finished with value: 114.6063473035756 and parameters: {'n_layers': 1, 'layer_0_dim': 126, 'dropout': 0.023327719318416953, 'lr': 0.0011660544973989447, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:14:52,780] Trial 81 finished with value: 97.45604257681407 and parameters: {'n_layers': 1, 'layer_0_dim': 116, 'dropout': 0.0944434267844339, 'lr': 0.00029511291364775374, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:14:54,613] Trial 82 pruned. 
+[I 2026-03-01 18:14:59,260] Trial 83 finished with value: 103.52408198622288 and parameters: {'n_layers': 1, 'layer_0_dim': 120, 'dropout': 0.027811095019032388, 'lr': 0.0004702812356503286, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:15:03,769] Trial 84 finished with value: 104.14159274604754 and parameters: {'n_layers': 1, 'layer_0_dim': 114, 'dropout': 0.05504672768705608, 'lr': 0.0005869876326117369, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:15:05,762] Trial 85 pruned. 
+[I 2026-03-01 18:15:10,271] Trial 86 finished with value: 95.83670711761806 and parameters: {'n_layers': 1, 'layer_0_dim': 99, 'dropout': 0.0878111658411166, 'lr': 0.000757230321538488, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:15:13,484] Trial 87 pruned. 
+[I 2026-03-01 18:15:15,806] Trial 88 pruned. 
+[I 2026-03-01 18:15:20,302] Trial 89 finished with value: 112.95599684717308 and parameters: {'n_layers': 1, 'layer_0_dim': 99, 'dropout': 0.11684721661823856, 'lr': 0.0008899999581529046, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:15:22,672] Trial 90 pruned. 
+[I 2026-03-01 18:15:27,343] Trial 91 finished with value: 98.72996041449369 and parameters: {'n_layers': 1, 'layer_0_dim': 122, 'dropout': 0.10279440870859842, 'lr': 0.00026316398053836905, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:15:32,026] Trial 92 finished with value: 93.9599527859391 and parameters: {'n_layers': 1, 'layer_0_dim': 113, 'dropout': 0.07506932181061388, 'lr': 0.0004444700506826706, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:15:36,664] Trial 93 finished with value: 113.52216024616791 and parameters: {'n_layers': 1, 'layer_0_dim': 105, 'dropout': 0.05123977013032168, 'lr': 0.0004404591665056501, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:15:41,296] Trial 94 finished with value: 114.0422963588353 and parameters: {'n_layers': 1, 'layer_0_dim': 112, 'dropout': 0.0994373295333829, 'lr': 0.000524711446933487, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:15:45,941] Trial 95 finished with value: 88.96059047692688 and parameters: {'n_layers': 1, 'layer_0_dim': 118, 'dropout': 0.06128469541903198, 'lr': 0.0006722460592629922, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:15:50,597] Trial 96 finished with value: 106.64714196545538 and parameters: {'n_layers': 1, 'layer_0_dim': 126, 'dropout': 0.0631050954834973, 'lr': 0.0006141630573926161, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:15:52,428] Trial 97 pruned. 
+[I 2026-03-01 18:15:57,119] Trial 98 finished with value: 83.09140478732297 and parameters: {'n_layers': 1, 'layer_0_dim': 118, 'dropout': 0.031718559043422995, 'lr': 0.00038049248853106615, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+[I 2026-03-01 18:16:01,786] Trial 99 finished with value: 86.91887150070397 and parameters: {'n_layers': 1, 'layer_0_dim': 119, 'dropout': 0.03562011476525851, 'lr': 0.0003710969829781479, 'batch_size': 512}. Best is trial 52 with value: 72.03557530151738.
+Executing on device: cuda
+==================================================
+🚀 STARTING DATA LOADING PIPELINE (DIAGNOSTIC MODE)
+==================================================
+🧠 FITTING ITERATIVE IMPUTER (BayesianRidge)...
+✅ Imputer fitting complete!
+🏁 Train: Generated 138025 windows.
+🏁 Val: Generated 32517 windows.
+🏁 Test(Normal): Generated 31197 windows.
+
+🚨 PROCESSING ANOMALY CLASSES...
+🏁 Class 1: Generated 151533 windows.
+🏁 Class 2: Generated 12233 windows.
+🏁 Class 3: Generated 82336 windows.
+🏁 Class 4: Generated 60961 windows.
+🏁 Class 5: Generated 221100 windows.
+🏁 Class 6: Generated 97603 windows.
+🏁 Class 7: Generated 171342 windows.
+🏁 Class 8: Generated 116419 windows.
+
+📏 NORMALIZING DATA...
+
+Starting Optimization...
+
+Best params: {'n_layers': 1, 'layer_0_dim': 117, 'dropout': 0.023602939500861293, 'lr': 0.00030064507446865736, 'batch_size': 512}
+Training Final Model for 25 epochs...
+
+==================================================
+🔬 DIAGNOSTIC EVALUATION PHASE
+==================================================
+Evaluating Normal Test Data...
+Normal Baseline MSE: 0.0006
+
+Evaluating Class 1...
+  -> AUROC: 0.9998 (151533 windows)
+  -> Top 3 error-driving sensors:
+     T-PDG: MSE = 373544512.0000
+     P-PDG: MSE = 358525760.0000
+     P-TPT: MSE = 103367136.0000
+
+Evaluating Class 2...
+  -> AUROC: 0.9980 (12233 windows)
+  -> Top 3 error-driving sensors:
+     P-MON-CKP: MSE = 22.6459
+     P-JUS-CKGL: MSE = 15.2090
+     P-TPT: MSE = 11.8629
+
+Evaluating Class 3...
+  -> AUROC: 0.9970 (82336 windows)
+  -> Top 3 error-driving sensors:
+     P-TPT: MSE = 0.9874
+     P-MON-CKP: MSE = 0.9495
+     T-PDG: MSE = 0.9143
+
+Evaluating Class 4...
+  -> AUROC: 0.9203 (60961 windows)
+  -> Top 3 error-driving sensors:
+     T-TPT: MSE = 2.5883
+     T-JUS-CKP: MSE = 2.2349
+     P-TPT: MSE = 1.9292
+
+Evaluating Class 5...
+  -> AUROC: 0.9987 (221100 windows)
+  -> Top 3 error-driving sensors:
+     P-TPT: MSE = 5.6761
+     P-JUS-CKGL: MSE = 3.3184
+     T-TPT: MSE = 2.6539
+
+Evaluating Class 6...
+  -> AUROC: 0.9958 (97603 windows)
+  -> Top 3 error-driving sensors:
+     T-JUS-CKP: MSE = 0.1520
+     T-TPT: MSE = 0.1020
+     P-TPT: MSE = 0.0617
+
+Evaluating Class 7...
+  -> AUROC: 0.9997 (171342 windows)
+  -> Top 3 error-driving sensors:
+     T-PDG: MSE = 1537856256.0000
+     P-PDG: MSE = 1371741568.0000
+     P-TPT: MSE = 395315360.0000
+
+Evaluating Class 8...
+  -> AUROC: 0.9999 (116419 windows)
+  -> Top 3 error-driving sensors:
+     T-TPT: MSE = 375558282149888.0000
+     P-PDG: MSE = 90050666692608.0000
+     P-MON-CKP: MSE = 89689713278976.0000
+
+==================================================
+🏆 FINAL OVERALL AUROC: 0.9935
+==================================================
+ROC Curve saved to /home/kulkarni/projects/pred_maintenance/meeting_prep/diagnostic_roc.png

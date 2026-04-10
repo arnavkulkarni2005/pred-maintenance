@@ -4,11 +4,11 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset
 import optuna
 import matplotlib.pyplot as plt
+import numpy as np
 from sklearn.metrics import roc_curve, auc
 
-# Import our modules
 import config
-from dataloader import load_data
+from dataloader1 import load_data
 from model import TunableAutoencoder
 
 def objective(trial, X_train, X_val, input_dim):
@@ -66,23 +66,18 @@ def objective(trial, X_train, X_val, input_dim):
 if __name__ == "__main__":
     print(f"Executing on device: {config.DEVICE}")
     
-    # 1. Load Data
-    X_train, X_val, X_test_norm, X_test_anom, N_FEATS = load_data()
+    # 1. Load Data (Anomalies are now a dict)
+    X_train, X_val, X_test_norm, X_test_anom_dict, N_FEATS = load_data()
     
     # 2. Run Optuna
-    print("Starting Optimization...")
+    print("\nStarting Optimization...")
     pruner = optuna.pruners.MedianPruner(
         n_startup_trials=config.PRUNER_STARTUP_TRIALS, 
         n_warmup_steps=config.PRUNER_WARMUP_STEPS
     )
     study = optuna.create_study(direction='minimize', pruner=pruner)
-    
-    study.optimize(
-        lambda trial: objective(trial, X_train, X_val, N_FEATS), 
-        n_trials=config.N_TRIALS
-    ) 
-    
-    print("Best params:", study.best_params)
+    study.optimize(lambda trial: objective(trial, X_train, X_val, N_FEATS), n_trials=config.N_TRIALS) 
+    print("\nBest params:", study.best_params)
     
     # 3. Train Best Model Fully
     best_layers = [study.best_params[f'layer_{i}_dim'] for i in range(study.best_params['n_layers'])]
@@ -95,7 +90,6 @@ if __name__ == "__main__":
     
     best_batch = study.best_params.get('batch_size', 256)
     optimizer = optim.Adam(final_model.parameters(), lr=study.best_params['lr'])
-    criterion = nn.MSELoss(reduction='none') 
     
     train_loader = DataLoader(TensorDataset(X_train), batch_size=best_batch, shuffle=True)
     
@@ -110,42 +104,80 @@ if __name__ == "__main__":
             loss.backward()
             optimizer.step()
             
-    # 4. Evaluation (ROC Curve)
-    print("Evaluating...")
+    # =======================================================
+    # 4. DIAGNOSTIC EVALUATION (The "Truth Serum")
+    # =======================================================
+    print("\n" + "="*50)
+    print("🔬 DIAGNOSTIC EVALUATION PHASE")
+    print("="*50)
     final_model.eval()
     
-    def get_losses(data):
+    def get_eval_metrics(data):
         loader = DataLoader(TensorDataset(data), batch_size=256)
         losses = []
+        all_x, all_recon = [], []
+        
         with torch.no_grad():
             for batch in loader:
                 x = batch[0].to(config.DEVICE)
                 recon = final_model(x)
+                
+                # Window-level loss (for ROC)
                 batch_loss = torch.mean((recon - x)**2, dim=[1, 2])
                 losses.extend(batch_loss.cpu().numpy())
-        return losses
+                
+                all_x.append(x.cpu().numpy())
+                all_recon.append(recon.cpu().numpy())
+                
+        return np.array(losses), np.concatenate(all_x), np.concatenate(all_recon)
 
-    loss_normal = get_losses(X_test_norm)
-    loss_anom = get_losses(X_test_anom)
+    print("Evaluating Normal Test Data...")
+    loss_normal, x_norm, recon_norm = get_eval_metrics(X_test_norm)
+    print(f"Normal Baseline MSE: {np.mean(loss_normal):.4f}")
+
+    all_anomaly_losses = []
     
-    y_true = [0]*len(loss_normal) + [1]*len(loss_anom)
-    y_scores = loss_normal + loss_anom
+    for cls, anom_data in sorted(X_test_anom_dict.items()):
+        print(f"\nEvaluating Class {cls}...")
+        loss_anom, x_anom, recon_anom = get_eval_metrics(anom_data)
+        all_anomaly_losses.extend(loss_anom)
+        
+        # Calculate Class AUROC
+        y_true_cls = [0]*len(loss_normal) + [1]*len(loss_anom)
+        y_scores_cls = np.concatenate([loss_normal, loss_anom])
+        fpr_cls, tpr_cls, _ = roc_curve(y_true_cls, y_scores_cls)
+        roc_auc_cls = auc(fpr_cls, tpr_cls)
+        
+        print(f"  -> AUROC: {roc_auc_cls:.4f} ({len(loss_anom)} windows)")
+        
+        # Calculate Feature-Wise MSE (Which sensor caused the anomaly?)
+        feature_mse = np.mean((recon_anom - x_anom)**2, axis=(0, 1))
+        
+        print("  -> Top 3 error-driving sensors:")
+        top_indices = np.argsort(-feature_mse)[:3]
+        for idx in top_indices:
+            print(f"     {config.TARGET_SENSORS[idx]}: MSE = {feature_mse[idx]:.4f}")
+
+    # Overall AUROC
+    y_true_all = [0]*len(loss_normal) + [1]*len(all_anomaly_losses)
+    y_scores_all = np.concatenate([loss_normal, all_anomaly_losses])
+    fpr_all, tpr_all, _ = roc_curve(y_true_all, y_scores_all)
+    roc_auc_all = auc(fpr_all, tpr_all)
     
-    fpr, tpr, thresholds = roc_curve(y_true, y_scores)
-    roc_auc = auc(fpr, tpr)
+    print("\n" + "="*50)
+    print(f"🏆 FINAL OVERALL AUROC: {roc_auc_all:.4f}")
+    print("="*50)
     
+    # Save Plot
     plt.figure(figsize=(8, 6))
-    plt.plot(fpr, tpr, color='darkorange', lw=2, label=f'ROC curve (area = {roc_auc:.2f})')
+    plt.plot(fpr_all, tpr_all, color='darkorange', lw=2, label=f'Overall ROC (area = {roc_auc_all:.4f})')
     plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
-    plt.xlim([0.0, 1.0])
-    plt.ylim([0.0, 1.05])
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title('Baseline Autoencoder Detection Performance (Full Imputation)')
+    plt.title('Diagnostic Autoencoder Detection Performance')
     plt.legend(loc="lower right")
     plt.grid(True, alpha=0.3)
     
-    save_path = config.OUTPUT_DIR / "final_baseline_roc.png"
+    save_path = config.OUTPUT_DIR / "diagnostic_roc.png"
     plt.savefig(save_path)
     print(f"ROC Curve saved to {save_path}")
-    print(f"FINAL AUROC: {roc_auc:.4f}")

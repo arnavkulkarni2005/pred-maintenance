@@ -1,0 +1,55 @@
+🚀 Initializing 4-Fold Cross-Validation on cuda
+==================================================
+🚀 STARTING DATA LOADING PIPELINE (DIAGNOSTIC MODE)
+==================================================
+🧠 FITTING ITERATIVE IMPUTER (BayesianRidge)...
+✅ Imputer fitting complete!
+🏁 Train: Generated 138025 windows.
+🏁 Val: Generated 32517 windows.
+🏁 Test(Normal): Generated 31197 windows.
+
+🚨 PROCESSING ANOMALY CLASSES...
+🏁 Class 1: Generated 151533 windows.
+🏁 Class 2: Generated 12233 windows.
+🏁 Class 3: Generated 82336 windows.
+🏁 Class 4: Generated 60961 windows.
+🏁 Class 5: Generated 221100 windows.
+🏁 Class 6: Generated 97603 windows.
+🏁 Class 7: Generated 171342 windows.
+🏁 Class 8: Generated 116419 windows.
+
+📏 NORMALIZING DATA (RobustScaler)...
+
+==================================================
+🏗️ ARCHITECTURE: 1-Layer MLP Autoencoder
+   Input: 960 -> Bottleneck: 123 -> Output
+==================================================
+
+--- 🌀 STARTING FOLD 1/4 ---
+✅ Fold 1 complete. Avg AUROC: 0.9865
+
+--- 🌀 STARTING FOLD 2/4 ---
+✅ Fold 2 complete. Avg AUROC: 0.9847
+
+--- 🌀 STARTING FOLD 3/4 ---
+✅ Fold 3 complete. Avg AUROC: 0.9834
+
+--- 🌀 STARTING FOLD 4/4 ---
+✅ Fold 4 complete. Avg AUROC: 0.9837
+
+============================================================
+📊 FINAL CROSS-VALIDATION SUMMARY TABLE
+============================================================
+  Fold 1 Fold 2 Fold 3 Fold 4 Mean AUROC Max AUROC
+1 0.9992 0.9993 0.9989 0.9994     0.9992    0.9994
+2 0.9978 0.9976 0.9965 0.9971     0.9972    0.9978
+3 0.9979 0.9983 0.9973 0.9975     0.9977    0.9983
+4 0.9054 0.8899 0.8875 0.8851     0.8920    0.9054
+5 0.9966 0.9980 0.9947 0.9970     0.9966    0.9980
+6 0.9970 0.9957 0.9946 0.9948     0.9955    0.9970
+7 0.9990 0.9991 0.9989 0.9990     0.9990    0.9991
+8 0.9994 0.9995 0.9992 0.9997     0.9994    0.9997
+
+============================================================
+🏆 TOTAL CROSS-VAL MEAN AUROC: 0.9846
+============================================================
